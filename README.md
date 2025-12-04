@@ -104,7 +104,7 @@ mv /tmp/kube-scheduler.yaml .
 ```
 <img width="440" height="116" alt="ggwp" src="https://github.com/user-attachments/assets/88d4741b-c860-41fe-ad85-16644c814a80" /> 
 2) Create 3 pods with the name as pod1, pod2 and pod3 based on the nginx image and use labels as env:test, env:dev and env:prod for each of these pods respectively.  
-vim pod1.yaml
+vim pod1.yaml  
 ```yaml
 apiVersion: v1
 kind: Pod
@@ -126,7 +126,7 @@ spec:
 ```bash
 kubectl create -f pod1.yaml
 ```
-vim pod2.yaml
+vim pod2.yaml  
 ```yaml
 apiVersion: v1
 kind: Pod
@@ -148,6 +148,7 @@ spec:
 ```bash
 kubectl create -f pod2.yaml
 ```
+vim pod3.yaml  
 ```yaml
 apiVersion: v1
 kind: Pod
@@ -171,15 +172,15 @@ kubectl create -f pod3.yaml
 ```
 ```bash
 kubectl get pods
-```
-<img width="440" height="116" alt="ggwp" src="https://github.com/user-attachments/assets/88d4741b-c860-41fe-ad85-16644c814a80" />  
-3) Then using the kubectl commands, filter the pods that have labels dev and prod.
+``` 
+3) Then using the kubectl commands, filter the pods that have labels dev and prod.  
 ```bash
 k get pods -l 'env in (dev,prod)' --show-labels
 ```
+  
 Check out the today's lecture from Original Mentor #Piyushsachdeva  
 Youtube - https://youtu.be/6eGf7_VSbrQ?si=Ma_NyE1g-7dNw-1Y  
-Github - https://github.com/piyushsachdeva/CKA-2024/blob/main/Resources/Day13/readme.md
+Github - https://github.com/piyushsachdeva/CKA-2024/blob/main/Resources/Day13/readme.md  
 Special thanks to Piyush sachdeva &The CloudOps Community for the guidance!  
   
 #Kubernetes #Docker # DevOps #TechLearning #Containerization #CloudOps  
