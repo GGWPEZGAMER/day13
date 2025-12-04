@@ -4,9 +4,9 @@ Hello #LinkedInCommunity and #TheCloudOpsCommunity ,
 Today I want to share the Day 13 of #40DaysOfKubernetes journey with #Piyushsachdeva  
 Below are the lecture of Day 13 learning.  
 
-What is Static Pod?  
+What is Static Pod?   
 A Static Pod in Kubernetes is a special kind of pod that is managed directly by the kubelet on a specific node, rather than by the Kubernetes API server.  
-Example of Yaml File
+Example of Yaml File  
 ```yaml
 apiVersion: v1
 kind: Pod
@@ -22,9 +22,9 @@ spec:
 ```
 You would save this file to /etc/kubernetes/manifests/nginx-static.yaml on a node. The kubelet automatically notices it and runs the pod.  
   
-What is Manual Scheduling?
+What is Manual Scheduling?  
 In Kubernetes, manual scheduling refers to the process where you explicitly assign a pod to a specific node, instead of letting the Kubernetes scheduler automatically decide which node the pod should run on.  
-Example of Yaml File
+Example of Yaml File  
 ```yaml
 apiVersion: v1
 kind: Pod
@@ -38,12 +38,12 @@ spec:
     ports:
     - containerPort: 80
 ```
-Here, nodeName: node1 tells Kubernetes to run this pod only on the node named node1.  
+Here, nodeName: node1 tells Kubernetes to run this pod only on the node named node1.    
 The pod will not be scheduled by the Kubernetes scheduler; kubelet on that node takes care of it.  
-
-What is Labels and Selector?
+  
+What is Labels and Selector?  
 In Kubernetes, labels and selectors are closely related concepts used to organize, identify, and manage resources like Pods, Services, and Deployments. Let’s break it down clearly.  
-Example of Yaml File
+Example of Yaml File  
 ```yaml
 metadata:
   name: pod1
@@ -55,8 +55,8 @@ metadata:
 LAB  
 ### Step by Step ###  
 Install Cluster with [Day06 Video](https://github.com/GGWPEZGAMER/day06)  
-1) Create a pod and try to schedule it manually without the scheduler.
-Check First Cluster is running or not
+1) Create a pod and try to schedule it manually without the scheduler.  
+Check First Cluster is running or not  
 ```bash
 kubectl cluster-info
 ```
@@ -68,7 +68,7 @@ To get inside the cluster
 ```bash
 docker exec -it cka-cluster1-control-plane bash
 ```
-Move the kube-scheduler.yaml to /tmp
+Move the kube-scheduler.yaml to /tmp  
 ```bash
 cd /etc/kubernetes/manifests
 ```
@@ -84,7 +84,7 @@ exit
 ```bash
 kubectl get pod -n kube-system | grep scheduler
 ```
-if scheduler is moved , reply nothing
+if scheduler is moved , reply nothing  
 ```bash
 kubectl run nginx --image=nginx
 ```
