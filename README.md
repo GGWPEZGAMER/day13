@@ -21,6 +21,7 @@ spec:
     - containerPort: 80
 ```
 You would save this file to /etc/kubernetes/manifests/nginx-static.yaml on a node. The kubelet automatically notices it and runs the pod.  
+  
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
   
 What is Manual Scheduling?  
