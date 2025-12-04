@@ -21,6 +21,7 @@ spec:
     - containerPort: 80
 ```
 You would save this file to /etc/kubernetes/manifests/nginx-static.yaml on a node. The kubelet automatically notices it and runs the pod.  
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
   
 What is Manual Scheduling?  
 In Kubernetes, manual scheduling refers to the process where you explicitly assign a pod to a specific node, instead of letting the Kubernetes scheduler automatically decide which node the pod should run on.  
@@ -40,6 +41,7 @@ spec:
 ```
 Here, nodeName: node1 tells Kubernetes to run this pod only on the node named node1.    
 The pod will not be scheduled by the Kubernetes scheduler; kubelet on that node takes care of it.  
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
   
 What is Labels and Selector?  
 In Kubernetes, labels and selectors are closely related concepts used to organize, identify, and manage resources like Pods, Services, and Deployments. Let’s break it down clearly.  
@@ -51,7 +53,8 @@ metadata:
     app: nginx
     env: production
 ```
-
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+  
 LAB  
 ### Step by Step ###  
 Install Cluster with [Day06 Video](https://github.com/GGWPEZGAMER/day06)  
@@ -126,6 +129,8 @@ spec:
 ```bash
 kubectl create -f pod1.yaml
 ```
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+  
 vim pod2.yaml  
 ```yaml
 apiVersion: v1
@@ -148,6 +153,8 @@ spec:
 ```bash
 kubectl create -f pod2.yaml
 ```
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+  
 vim pod3.yaml  
 ```yaml
 apiVersion: v1
@@ -172,7 +179,9 @@ kubectl create -f pod3.yaml
 ```
 ```bash
 kubectl get pods
-``` 
+```
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+  
 3) Then using the kubectl commands, filter the pods that have labels dev and prod.  
 ```bash
 k get pods -l 'env in (dev,prod)' --show-labels
