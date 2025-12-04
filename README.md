@@ -1,4 +1,4 @@
-<img width="440" height="116" alt="image" src="https://github.com/user-attachments/assets/be96a3c7-0544-4006-88e7-8b4308796559" />Day 13 : Static Pods, Manual Scheduling, Labels, and Selectors in Kubernetes  
+Day 13 : Static Pods, Manual Scheduling, Labels, and Selectors in Kubernetes  
 Hello #LinkedInCommunity and #TheCloudOpsCommunity ,  
   
 Today I want to share the Day 13 of #40DaysOfKubernetes journey with #Piyushsachdeva  
@@ -92,7 +92,7 @@ kubectl run nginx --image=nginx
 kubectl get pods
 ```
 It will show like this  
-<img width="424" height="140" alt="Screenshot 2025-12-03 140933" src="https://github.com/user-attachments/assets/2de622bd-7f23-4da7-82c6-f34b16124f4e" />  
+<img width="423" height="140" alt="nginx" src="https://github.com/user-attachments/assets/865cfb61-e62d-41cb-bada-18db236412fa" />  
 ```bash
 docker exec -it cka-cluster1-control-plane bash
 ```
@@ -102,7 +102,7 @@ cd /etc/kubernetes/manifests
 ```bash
 mv /tmp/kube-scheduler.yaml .
 ```
-<img width="423" height="140" alt="nginx" src="https://github.com/user-attachments/assets/865cfb61-e62d-41cb-bada-18db236412fa" />  
+<img width="440" height="116" alt="ggwp" src="https://github.com/user-attachments/assets/88d4741b-c860-41fe-ad85-16644c814a80" /> 
 2) Create 3 pods with the name as pod1, pod2 and pod3 based on the nginx image and use labels as env:test, env:dev and env:prod for each of these pods respectively.  
 vim pod1.yaml
 ```yaml
